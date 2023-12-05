@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatBot</title>
+    <link
+      rel="shortcut icon"
+      href="./Title Image.jfif"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+  <body>
+    <div class="container1">
+      <div class="profile">
+        <div class="name">
+        <img src="https://images.pexels.com/photos/18978811/pexels-photo-18978811/free-photo-of-young-redhead-in-a-leather-jacket-and-sunglasses-sitting-on-a-bench.png?auto=compress&cs=tinysrgb&w=600&lazy=load" alt="profile_pic">
+        <p>Nishimwe Thierry</p>
+      </div>
+        <button class="more_btn">
+          <i class="bi bi-three-dots"></i>
+          <span class="option-text">Options</span>
+        </button>
+  <!-- recent start Here! -->
+    <div>
+      <h3 class="Chats">Chats</h3>
+      <H4 class="recents">Recents Chats</H4>
+      <div class="new-screen">
+      <button class="more_btn">
+        <i class="bi bi-patch-plus-fill"></i>
+        <span class="option-text">New Chat</span>
+      </button>
+      <button class="more_btn">
+        <i class="bi bi-fullscreen"></i>
+        <span class="option-text">View Full</span>
+      </button>
+      </div>
+    </div>
+  </div>
+ 
+    <!-- Chat side start here! -->
+    <div class="chatbot">
+      <header style="display: flex;justify-content: space-between;">
+        <h2 style="display: flex; gap: 100px;"><p>ChatBot:</p><p style="color: rgb(220, 220, 214);">For your Homework and Project!</p></h2>
+        <!--btn for closing this div-->
+        <button id="chatbotClose" class="chatbotbtn" onclick="toggleRightDiv()">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <img src="./Chat Image2.png" alt="" style="height: 40px;width: 40px; border-radius: 40%;">
+          <p>Hi there!👋<br >How can I make your day easier 💁‍♂️?</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="How can I make your day easier?" required></textarea>
+        <span id="send-btn" class="material-symbols-outlined">send</span>
+      </div>
+    </div>
+    <script src="index.js" defer></script>
+  </body>
+</html>

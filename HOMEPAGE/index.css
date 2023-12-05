@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  margin: 0;
+  gap: 5px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: aqua;
+}
+.containerbtn{
+  height: 50px;
+  width: 50px;
+  right: 25%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  color: #fff;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: dodgerblue;
+
+}
+.containerbtn span{
+  position: absolute;
+}
+.containerbtn span:last-child{
+  opacity: 0;
+}
+.chatbotbtn{
+  height: 50px;
+  width: 50px;
+  right: 25%;
+  color: #fff;
+  background-color: red;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.chatbot{
+  position: fixed;
+  bottom: 0;
+  margin-left: 30%;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 128px 0 rgb(0,0, 0,0.1),
+              0 0 32px 64px -48px rgb(0,0, 0,0.5);
+}
+
+.chatbot header{
+  padding-left: 5px;
+  background-color: dodgerblue;
+  text-align: center;
+  align-items: center;
+  border-radius: 15px;
+  top: 0;
+  height: 50px;
+}
+.chatbot header h2{
+  color: yellow;
+  font-size: 1.5rem;
+}
+.chatbot .chatbox{
+  left: 0;
+  right: 0;
+  top: 10px;
+  width: 98%;
+  height: 75%;
+  bottom: 5%;
+  margin: 20px 0;
+  position: relative;
+  overflow-y: auto;
+  justify-content: space-between;
+}
+.chatbot .chat{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.chatbot .incoming img{
+  line-height: 40px;
+  margin: 0 12px 6px 0;
+}
+.chatbot .outgoing img{
+  line-height: 40px;
+  margin: 0 12px 6px 0;
+}
+.chatbot .outgoing{
+  right: 50%;
+  margin-right: 1px;
+  justify-content: flex-end;
+}
+.chatbot .chat p{
+  padding: 8px;
+  max-width: 50%;
+  width: fit-content;
+  color: rgb(255, 255, 255);
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  border-radius: 10px 10px 0 10px;
+  background-color: dodgerblue;
+}
+.chatbot .chat p.error{
+  color: #721c24;
+  background-color: #f8d7da;
+
+}
+.chatbot .incoming p{
+  color: #000;
+  background-color: #f2f2f2;
+  border-radius: 10px 10px 0 10px;
+}
+.chatbot .chat-input{
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  position: absolute;
+  padding: 5px 20px;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  overflow-y: auto;
+}
+.chat-input textarea{
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 16px 15px 16px 0;
+  height: 55px;
+  width: 100%;
+  font-size: 0.95rem;
+}
+.chat-input textarea::placeholder {
+  color: #999;
+}
+.chat-input span {
+  color: dodgerblue;
+  font-size: 2rem;
+  cursor: pointer;
+  align-self: flex-end;
+  height: 55px;
+  line-height: 55px;
+  }
+  .chat-input textarea:valid ~ span{
+    visibility: visible;
+  }
+/* Youtube styling starting here so note that! */
+.container1{
+  background-color: rgb(172, 163, 163);
+  margin-right: 70%;
+  height: 100vh;
+  width: 30%;
+  padding: 5px;
+  border-radius: 15px;;
+  float: left;
+  position: fixed;
+  top: 0; 
+  left: 0;
+
+}
+.name{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+.profile{
+    display: flex;
+    justify-content: space-between;
+}
+.profile img{
+    border-radius: 40px;
+    height: 40px;
+    width: 40px;
+}
+/* Ensure the button has relative positioning to handle absolute positioning within it */
+.more_btn {
+    position: relative;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  /* Style for the icon */
+  .more_btn i {
+    /* Add your preferred icon styles here */
+    font-size: 25px;
+  }
+  
+  /* Style for the text */
+  .option-text {
+    position: absolute;
+    top: 5;
+    left: 50%; /* Adjust as needed to center the text */
+    transform: translateX(-50%);
+    display: none; /* Initially hide the text */
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Show the text on hover */
+  .more_btn:hover .option-text {
+    display: block;
+  }
+  @media(max-width:490px){
+    .chatbot{
+      right: 0;
+      bottom:0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+
+    }
+    .chatbot .chatbox{
+      height: 90%;
+    }
+  }
+  /* Scroll bar design */
+  .chatbox::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 0;
+  }
+  
+  .chatbox::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  .chatbox::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
+  
+  .chatbox::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+/*for maximazing the chatbot*/
+  /* .chatbot.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;} */
